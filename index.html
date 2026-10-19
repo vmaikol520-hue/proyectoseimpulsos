@@ -62,30 +62,26 @@
             gap: 0.8rem;
         }
 
-        .btn-header-1 {
-            background-color: var(--accent);
-            color: var(--white);
+        .btn-header-1, .btn-header-2 {
             padding: 0.5rem 1rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
             transition: background 0.3s;
+            cursor: pointer;
         }
 
+        .btn-header-1 {
+            background-color: var(--accent);
+            color: var(--white);
+        }
         .btn-header-1:hover { background-color: var(--accent-hover); }
 
         .btn-header-2 {
             background-color: var(--primary);
             color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: background 0.3s;
         }
-
         .btn-header-2:hover { background-color: var(--secondary-btn); }
 
         /* Hero Section */
@@ -153,9 +149,7 @@
             margin: 0;
         }
 
-        .btn-primary-af {
-            background-color: var(--accent);
-            color: var(--white);
+        .btn-primary-af, .btn-secondary-af {
             padding: 0.8rem 1.2rem;
             border-radius: 6px;
             font-weight: 700;
@@ -163,9 +157,17 @@
             font-size: 0.95rem;
             transition: background 0.3s, transform 0.2s;
             white-space: nowrap;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+            text-align: center;
         }
 
+        .btn-primary-af {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
         .btn-primary-af:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
@@ -174,16 +176,8 @@
         .btn-secondary-af {
             background-color: var(--secondary-btn);
             color: var(--white);
-            padding: 0.8rem 1.2rem;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: background 0.3s, transform 0.2s;
-            white-space: nowrap;
             box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
         }
-
         .btn-secondary-af:hover {
             background-color: var(--secondary-btn-hover);
             transform: translateY(-2px);
@@ -364,8 +358,8 @@
     <header>
         <div class="logo">Soluciones<span>Financieras</span></div>
         <div class="header-buttons">
-            <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-header-1">Opción A</a>
-            <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-header-2">Opción B</a>
+            <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=7&aff_id=109')" class="btn-header-1">Opción A</button>
+            <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=14&aff_id=109')" class="btn-header-2">Opción B</button>
         </div>
     </header>
 
@@ -381,9 +375,9 @@
                     <h4>Opción 1: Crédito Express</h4>
                     <p>Aprobación rápida en minutos • Sin avales</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-primary-af">
+                <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=7&aff_id=109')" class="btn-primary-af">
                     Solicitar Opción 1 <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
             </div>
 
             <!-- Opción 2 -->
@@ -392,9 +386,9 @@
                     <h4>Opción 2: Financiamiento Flexible</h4>
                     <p>Altas tasas de aprobación • Plazos adaptables</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-secondary-af">
+                <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=14&aff_id=109')" class="btn-secondary-af">
                     Solicitar Opción 2 <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
             </div>
         </div>
 
@@ -474,9 +468,9 @@
                     <h4>Opción 1: Crédito Express</h4>
                     <p>Aprobación rápida en minutos</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-primary-af">
+                <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=7&aff_id=109')" class="btn-primary-af">
                     Ir a Opción 1 <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
             </div>
 
             <!-- Opción 2 -->
@@ -485,9 +479,9 @@
                     <h4>Opción 2: Financiamiento Flexible</h4>
                     <p>Altas tasas de aprobación</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" target="_blank" rel="noopener noreferrer" class="btn-secondary-af">
+                <button onclick="openExternalLink('https://o.uvixs.com//tr?offer_id=14&aff_id=109')" class="btn-secondary-af">
                     Ir a Opción 2 <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -498,5 +492,31 @@
         <p class="disclaimer">Aviso importante: Este sitio web opera como un recomendador de servicios informativos y de intermediación publicitaria para afiliados. No somos una entidad financiera directa ni otorgamos préstamos por cuenta propia. Las condiciones de aprobación, tasas y desembolsos dependen exclusivamente de las entidades prestamistas finales asociadas.</p>
     </footer>
 
+    <!-- Script de redirección para forzar navegador externo -->
+    <script>
+        function openExternalLink(url) {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Detectar si estamos dentro del navegador interno de Facebook / Messenger / Instagram
+            if (ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1 || ua.indexOf("Instagram") > -1) {
+                // Truco para forzar apertura externa en Android/iOS pasando por esquema nativo o ventana limpia
+                var a = document.createElement('a');
+                a.href = url;
+                a.target = '_system'; // Forzar sistema operativo en ciertos WebViews
+                if(document.createEvent) {
+                    var event = document.createEvent('MouseEvents');
+                    event.initEvent('click', true, true);
+                    a.dispatchEvent(event);
+                } else {
+                    a.click();
+                }
+                // Fallback directo si el evento no fuerza la salida inmediata
+                window.location.href = url;
+            } else {
+                // Si está en un navegador normal (Chrome/Safari), abre en pestaña nueva limpio
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
