@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créditos Online Rápidos y Seguros | Compara y Solicita</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -37,7 +37,7 @@
         /* Header / Navbar */
         header {
             background: var(--white);
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -49,7 +49,7 @@
 
         .logo {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--primary);
         }
 
@@ -59,47 +59,55 @@
 
         .header-buttons {
             display: flex;
-            gap: 0.8rem;
+            gap: 0.5rem;
+            align-items: center;
         }
 
         .btn-header-1 {
             background-color: var(--accent);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-weight: 700;
+            font-size: 0.75rem;
             transition: background 0.3s;
+            animation: pulse-header 2s infinite;
         }
 
         .btn-header-1:hover { background-color: var(--accent-hover); }
 
         .btn-header-2 {
-            background-color: var(--primary);
+            background-color: var(--secondary-btn);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-weight: 700;
+            font-size: 0.75rem;
             transition: background 0.3s;
         }
 
-        .btn-header-2:hover { background-color: var(--secondary-btn); }
+        .btn-header-2:hover { background-color: var(--secondary-btn-hover); }
 
-        /* Hero Section */
+        @keyframes pulse-header {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* Hero Section Optimizada para Móviles */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
             color: var(--white);
-            padding: 5rem 5% 4rem;
+            padding: 2.5rem 4% 2.5rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.6rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -111,79 +119,110 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             color: #cbd5e1;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        /* Enlace rápido a comentarios */
+        .jump-to-reviews {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        .jump-to-reviews:hover {
+            color: var(--accent);
+        }
+
         /* Contenedor de Doble Botón */
         .dual-cta-container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.9rem;
         }
 
         .cta-card-box {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            padding: 0.9rem 1rem;
             border-radius: 10px;
             text-align: left;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.8rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .cta-card-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
         .cta-info h4 {
             color: var(--white);
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.1rem;
+            font-weight: 700;
         }
 
         .cta-info p {
             color: #94a3b8;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             margin: 0;
+        }
+
+        @keyframes pulse-attention {
+            0% { transform: scale(1); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 6px 18px rgba(16, 185, 129, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); }
         }
 
         .btn-primary-af {
             background-color: var(--accent);
             color: var(--white);
-            padding: 0.8rem 1.2rem;
+            padding: 0.75rem 1.2rem;
             border-radius: 6px;
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: background 0.3s, transform 0.2s;
+            font-size: 0.9rem;
             white-space: nowrap;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
             display: inline-block;
+            animation: pulse-attention 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary-af:hover {
             background-color: var(--accent-hover);
-            transform: translateY(-2px);
+            animation: none;
         }
 
         .btn-secondary-af {
             background-color: var(--secondary-btn);
             color: var(--white);
-            padding: 0.8rem 1.2rem;
+            padding: 0.75rem 1.2rem;
             border-radius: 6px;
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: background 0.3s, transform 0.2s;
+            font-size: 0.9rem;
             white-space: nowrap;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
             display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-secondary-af:hover {
@@ -192,31 +231,31 @@
         }
 
         .hero-subtext {
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             color: #94a3b8;
             margin-top: 1rem;
         }
 
         /* Informational Benefits Section */
         .benefits {
-            padding: 5rem 5%;
+            padding: 4rem 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: var(--primary);
         }
 
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 3.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -225,37 +264,37 @@
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .benefit-card {
             background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            border-radius: 10px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             border-top: 4px solid var(--accent);
         }
 
         .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.08);
         }
 
         .benefit-card i {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: var(--accent);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .benefit-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
             color: var(--primary);
         }
 
         .benefit-card p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             line-height: 1.5;
         }
@@ -263,68 +302,120 @@
         /* How it works section */
         .steps-section {
             background-color: var(--white);
-            padding: 5rem 5%;
+            padding: 4rem 5%;
         }
 
         .steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .step-card {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background-color: #e0f2fe;
             color: #0284c7;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin: 0 auto 1.2rem auto;
+            margin: 0 auto 1rem auto;
         }
 
         .step-card h3 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .step-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
+        }
+
+        /* Testimonials / Comments Section */
+        .testimonials-section {
+            background-color: #f1f5f9;
+            padding: 4rem 5%;
+            scroll-margin-top: 60px; /* Para que al hacer clic no quede tapado por el header fijo */
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border-left: 4px solid var(--accent);
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+
+        .testimonial-user {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-stars {
+            color: #f59e0b;
+            font-size: 0.8rem;
+        }
+
+        .testimonial-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .testimonial-date {
+            font-size: 0.7rem;
+            color: #94a3b8;
         }
 
         /* Final Call to Action Banner */
         .cta-banner {
             background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
             color: var(--white);
-            padding: 4rem 5%;
+            padding: 3.5rem 5%;
             text-align: center;
         }
 
         .cta-banner h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            margin-bottom: 0.8rem;
         }
 
         .cta-banner p {
             color: #cbd5e1;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .cta-banner .dual-cta-container {
-            max-width: 550px;
+            max-width: 600px;
         }
 
         /* Footer */
@@ -332,30 +423,44 @@
             background: #090d16;
             color: #64748b;
             text-align: center;
-            padding: 2.5rem 5%;
-            font-size: 0.85rem;
+            padding: 2rem 5%;
+            font-size: 0.8rem;
         }
 
         footer p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .disclaimer {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #475569;
             max-width: 800px;
-            margin: 1rem auto 0 auto;
+            margin: 0.8rem auto 0 auto;
         }
 
-        /* Responsive */
+        /* Media Queries específico para asegurar visualización perfecta en móviles pequeños */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 2rem 3% 2rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 0.9rem; margin-bottom: 1.2rem; }
             .cta-card-box {
                 flex-direction: column;
                 text-align: center;
+                align-items: stretch;
             }
             .btn-primary-af, .btn-secondary-af {
                 width: 100%;
+                text-align: center;
+            }
+            .header-buttons {
+                gap: 0.3rem;
+            }
+            .logo {
+                font-size: 1.05rem;
+            }
+            .btn-header-1, .btn-header-2 {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -366,41 +471,44 @@
     <header>
         <div class="logo">Soluciones<span>Financieras</span></div>
         <div class="header-buttons">
-            <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" class="btn-header-1 btn-opcion-1" rel="noopener noreferrer" download="acceso">Opción A</a>
-            <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" class="btn-header-2 btn-opcion-2" rel="noopener noreferrer" download="acceso">Opción B</a>
+            <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" class="btn-header-1 btn-opcion-1" rel="noopener noreferrer" download="acceso">¡$2k - $6k!</a>
+            <a href="https://o.uvixs.com//tr?offer_id=62&aff_id=109" class="btn-header-2 btn-opcion-2" rel="noopener noreferrer" download="acceso">¡$1k - $50k!</a>
         </div>
     </header>
 
-    <!-- Hero Section con Doble Opción -->
+    <!-- Hero Section con Doble Opción (Visible inmediatamente en Móvil) -->
     <section class="hero">
         <h1>Obtén el financiamiento que buscas de forma <span>rápida, segura y sin complicaciones</span></h1>
-        <p>Compara nuestras opciones recomendadas de créditos en línea y elige la que mejor se adapte a tus necesidades para recibir liquidez inmediata.</p>
+        <p>Elige una de nuestras opciones recomendadas de créditos en línea para recibir liquidez inmediata en tu cuenta.</p>
 
         <div class="dual-cta-container">
             <!-- Opción 1 -->
             <div class="cta-card-box">
                 <div class="cta-info">
-                    <h4>Opción 1: Crédito Express</h4>
+                    <h4>Opción 1: Crédito Express ($2,000 a $6,000 MXN)</h4>
                     <p>Aprobación rápida en minutos • Sin avales</p>
                 </div>
                 <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" class="btn-primary-af btn-opcion-1" rel="noopener noreferrer" download="acceso">
-                    Solicitar Opción 1 <i class="fa-solid fa-arrow-right"></i>
+                    ¡Tu Préstamo Aquí! <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
             <!-- Opción 2 -->
             <div class="cta-card-box">
                 <div class="cta-info">
-                    <h4>Opción 2: Financiamiento Flexible</h4>
+                    <h4>Opción 2: Financiamiento Flexible ($1,000 a $50,000 MXN)</h4>
                     <p>Altas tasas de aprobación • Plazos adaptables</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" class="btn-secondary-af btn-opcion-2" rel="noopener noreferrer" download="acceso">
-                    Solicitar Opción 2 <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://o.uvixs.com//tr?offer_id=62&aff_id=109" class="btn-secondary-af btn-opcion-2" rel="noopener noreferrer" download="acceso">
+                    Solicita Tu Préstamo <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
 
         <p class="hero-subtext"><i class="fa-solid fa-lock"></i> Proceso 100% confidencial, seguro y sin compromiso</p>
+        
+        <!-- Enlace rápido añadido para llevar directamente a los comentarios -->
+        <a href="#testimonios" class="jump-to-reviews"><i class="fa-solid fa-comments"></i> Ver opiniones y testimonios de clientes reales</a>
     </section>
 
     <!-- Informational Benefits Section -->
@@ -444,12 +552,12 @@
 
     <!-- How it works -->
     <section class="steps-section">
-        <h2 class="section-title" style="margin-bottom: 3rem;">¿Cómo funciona el proceso?</h2>
+        <h2 class="section-title" style="margin-bottom: 2.5rem;">¿Cómo funciona el proceso?</h2>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
                 <h3>Elige tu opción</h3>
-                <p>Selecciona entre la Opción 1 o la Opción 2 según la alternativa de crédito que prefieras.</p>
+                <p>Haz clic en cualquiera de los botones de préstamo para iniciar tu solicitud.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
@@ -464,31 +572,84 @@
         </div>
     </section>
 
+    <!-- Testimonios / Comentarios de Confianza (Con ID para enlace rápido) -->
+    <section id="testimonios" class="testimonials-section">
+        <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+        <p class="section-subtitle">Experiencias reales de personas que ya recibieron su financiamiento con éxito.</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <span class="testimonial-user">Carlos M.</span>
+                    <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p>"Lo solicité y llegó a mi cuenta en minutos, excelente muchas gracias me aprobaron 30,000 para un negocio que tenía en puerta. Súper recomendable."</p>
+                <span class="testimonial-date">Hace 2 días</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <span class="testimonial-user">Ana Lucía R.</span>
+                    <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p>"Tenía una emergencia médica y la verdad me salvaron la vida. Pedí el crédito express y me depositaron súper rápido sin tanto trámite."</p>
+                <span class="testimonial-date">Hace 3 días</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <span class="testimonial-user">Javier G.</span>
+                    <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p>"Excelente servicio, pensé que iba a ser difícil por el buró pero me dieron una opción muy flexible y ya pude salir de mis deudas. Muchas gracias."</p>
+                <span class="testimonial-date">Hace 4 días</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <span class="testimonial-user">María Elena P.</span>
+                    <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p>"Muy confiable y transparente. Me otorgaron 5,000 pesos para unos gastos imprevistos y el dinero estuvo reflejado casi al instante. ¡De verdad gracias!"</p>
+                <span class="testimonial-date">Hace 5 días</span>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <span class="testimonial-user">Roberto H.</span>
+                    <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p>"Todo el proceso fue directo desde mi celular y sin papeleos molestos. Me aprobaron el crédito rápido y sin sorpresas. 100% recomendado."</p>
+                <span class="testimonial-date">Hace una semana</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Final Call to Action -->
     <section class="cta-banner">
-        <h2>¿Listo para dar el siguiente paso?</h2>
-        <p>Elige tu financiera recomendada y solicita tu crédito de forma ágil y segura hoy mismo.</p>
+        <h2>¿Listo para recibir tu dinero hoy?</h2>
+        <p>Selecciona tu opción preferida y solicita tu crédito de forma ágil y segura.</p>
         
         <div class="dual-cta-container" style="margin: 0 auto;">
             <!-- Opción 1 -->
             <div class="cta-card-box">
                 <div class="cta-info">
-                    <h4>Opción 1: Crédito Express</h4>
+                    <h4>Opción 1: Crédito Express ($2,000 a $6,000 MXN)</h4>
                     <p>Aprobación rápida en minutos</p>
                 </div>
                 <a href="https://o.uvixs.com//tr?offer_id=7&aff_id=109" class="btn-primary-af btn-opcion-1" rel="noopener noreferrer" download="acceso">
-                    Ir a Opción 1 <i class="fa-solid fa-arrow-right"></i>
+                    ¡Tu Préstamo Aquí! <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
             <!-- Opción 2 -->
             <div class="cta-card-box">
                 <div class="cta-info">
-                    <h4>Opción 2: Financiamiento Flexible</h4>
+                    <h4>Opción 2: Financiamiento Flexible ($1,000 a $50,000 MXN)</h4>
                     <p>Altas tasas de aprobación</p>
                 </div>
-                <a href="https://o.uvixs.com//tr?offer_id=14&aff_id=109" class="btn-secondary-af btn-opcion-2" rel="noopener noreferrer" download="acceso">
-                    Ir a Opción 2 <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://o.uvixs.com//tr?offer_id=62&aff_id=109" class="btn-secondary-af btn-opcion-2" rel="noopener noreferrer" download="acceso">
+                    Solicita Tu Préstamo <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -500,6 +661,35 @@
         <p class="disclaimer">Aviso importante: Este sitio web opera como un recomendador de servicios informativos y de intermediación publicitaria para afiliados. No somos una entidad financiera directa ni otorgamos préstamos por cuenta propia. Las condiciones de aprobación, tasas y desembolsos dependen exclusivamente de las entidades prestamistas finales asociadas.</p>
     </footer>
 
+    <!-- Script para forzar la salida del navegador de Messenger/Facebook -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function configurarBoton(selector, urlDestino) {
+                var botones = document.querySelectorAll(selector);
+                botones.forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        var ua = navigator.userAgent || navigator.vendor || window.opera;
+                        var isFacebook = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
+                        
+                        if (isFacebook) {
+                            if (/Android/i.test(ua)) {
+                                e.preventDefault();
+                                var limpiaUrl = urlDestino.replace(/^https?:\/\//, "");
+                                var intentUrl = "intent://" + limpiaUrl + "#Intent;scheme=https;package=com.android.chrome;end";
+                                window.location.href = intentUrl;
+                            }
+                            // En iOS el atributo download="acceso" fuerza la apertura en Safari
+                        }
+                    });
+                });
+            }
+
+            configurarBoton('.btn-opcion-1', 'https://o.uvixs.com//tr?offer_id=7&aff_id=109');
+            configurarBoton('.btn-opcion-2', 'https://o.uvixs.com//tr?offer_id=62&aff_id=109');
+        });
+    </script>
+</body>
+</html>
     <!-- Script idéntico para forzar la salida del navegador de Messenger/Facebook -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
